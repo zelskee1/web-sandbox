@@ -1,0 +1,22 @@
+{
+  "name": "web-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zelskee1/web-sandbox.git"
+  },
+  "author": "William Gijsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zelskee1/web-sandbox/issues"
+  },
+  "homepage": "https://github.com/zelskee1/web-sandbox#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
