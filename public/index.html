@@ -10,9 +10,22 @@
 <body id="homepage-body">
     <div id="homepage-main-frame">
         <div id="controller">
-            <h1 id="homepage-frame-title">Database Controller</h1>
+            <h1 class="homepage-frame-title">Database Controller</h1>
             <textarea id="sqlrequest" placeholder="Écrivez une requête ici"></textarea>
-            <button class="action-button">Envoyer une requête</button>
+            <button class="action-button" id="anotherpage">Go to another page</button>
+            <button class="action-button" id="bj">Play blackjack</button>
+        
+            <script>
+                const anotherpage = document.getElementById('anotherpage');
+                anotherpage.onclick = () => {
+                    location.assign('/autrepage.html');            
+                }
+
+                const bj = document.getElementById('bj');
+                bj.onclick = () => {
+                    location.assign('/blackjack.html');
+                }
+            </script>
         </div>
     </div>
 </body>

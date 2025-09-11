@@ -14,9 +14,11 @@
   "bugs": {
     "url": "https://github.com/zelskee1/web-sandbox/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/zelskee1/web-sandbox#readme",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "sqlite3": "^5.1.7"
   }
 }

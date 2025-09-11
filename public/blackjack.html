@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="icon" href="images/blackjack.png">
+</head>
+<body id="homepage-body">
+    <div id="homepage-main-frame">
+        <div id="controller">
+            <h1 class="homepage-frame-title bj-bg">Blackjack</h1>
+            <button class="action-button" id="home-button">Home</button>
+            <button class="action-button" id="deckgen-button">Generate deck</button>
+            <button class="action-button" id="deckshuf-button">Shuffle Deck</button>
+            <button class="action-button" id="showdeck-button">Show Deck</button>
+            <button class="action-button" id="deckdraw-button">Draw a card</button>
+            <script src="src/cards.js"></script>
+            <script>
+                const container = document.getElementById('controller');
+                
+                let deck;
+
+                const homeButton = document.getElementById('home-button');
+                homeButton.onclick = () => {
+                    location.assign('/');
+                }
+
+                const genButton = document.getElementById('deckgen-button');
+                genButton.onclick = () => {
+                    console.log("Generating deck...");
+                    deck = generateDeck();
+                }
+
+                const shufButton = document.getElementById('deckshuf-button');
+                shufButton.onclick = () => {
+                    if(deck.length == 0) {
+                        const p = document.createElement('p');  
+                        p.textContent = 'deck is empty!'
+                        container.appendChild(p);
+                    }
+                    else {
+                        console.log("Shuffling deck...");
+                        shuffleDeck(deck);
+                    }
+                }
+
+                const showButton = document.getElementById('showdeck-button');
+                showButton.onclick = () => {
+                    console.log(`Showing deck in text format... (${deck.length} elements)`);
+                    const p = document.createElement('p');
+                    p.textContent = deck.join(', ');
+                    container.appendChild(p);
+                }
+
+                const drawButton = document.getElementById('deckdraw-button');
+                drawButton.onclick = () => {
+                    const p = document.createElement('p');                
+                    if(deck.length == 0) {p.textContent = 'deck is empty!'}
+                    else{
+                        card = drawCard(deck);
+                        const img = document.createElement('img');
+                        img.src= cards_images[card];
+                        img.alt = card;
+                        img.style.width = "80px"; img.style.alignSelf='center';
+                        container.appendChild(img);
+                        console.log(`${card} has been drawn`);                
+                    }
+                    container.appendChild(p);
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
