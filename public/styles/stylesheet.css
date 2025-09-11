@@ -2,6 +2,19 @@ body {
     all: unset;
 }
 
+button {
+    border-radius: 5px;
+    border: solid 1px;
+}
+
+.action-button {
+    transition: ease 0.2s;
+}
+
+.action-button:hover {
+    background-color: rgb(230, 240, 255);
+}
+
 #homepage-main-frame {
     margin: 1em;
     width: 90vw;
@@ -27,7 +40,7 @@ body {
 
 #controller {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     background-color: rgb(222, 222, 222);
     width: 100%;
     border: 1px solid black;
@@ -52,4 +65,16 @@ body {
     min-height: 10%;
     max-height: 20%;
     align-self: center;
+}
+
+#cards-table:empty{display: none;}
+#cards-table{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+    background-color: green;
+    border-radius: 5px;
+    margin: 5px;
+    justify-items: center;
 }

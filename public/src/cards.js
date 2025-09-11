@@ -3,6 +3,7 @@ const suits = ['pique', 'coeur', 'carreau', 'trefle'];
 
 const cards_images = {};
 
+
 function generateDeck() {
   const deck = [];
 
