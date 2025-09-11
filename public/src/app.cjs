@@ -5,7 +5,8 @@ const sqlite3 = require("sqlite3").verbose();
 
 app.use(express.static('public'));
 
-const db = new sqlite3.Database("./db/principal.db", (err) => {
+const dbPath = path.join(__dirname, "..", "..", "db", "principal.db");
+const db = new sqlite3.Database(dbPath, (err) => {
   if (err) {
     console.error("Erreur de connexion à la DB:", err.message);
   } else {
