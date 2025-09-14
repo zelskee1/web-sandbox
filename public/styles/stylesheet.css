@@ -8,27 +8,42 @@ button {
 }
 
 .action-button {
-    transition: ease 0.2s;
+    font-size: large;
+    width: 15%;
+    transition: ease 150ms;
 }
 
 .action-button:hover {
     background-color: rgb(230, 240, 255);
 }
 
+.action-button:active {
+    background-color: rgb(210, 223, 250);
+}
+
+.buttons-container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #homepage-main-frame {
     margin: 1em;
-    width: 90vw;
+    width: 900vw;
     height: fit-content;
     align-content: center;
     justify-items: center;
 }
 
 .homepage-frame-title {
-    all:unset;
+    align-self: stretch;
+    margin: 0;
     color: rgb(255, 255, 255);
     padding: 5px;
     background-color: rgb(61, 94, 201);
-    border-bottom: solid black 1px;
+    border: solid black 1px;
+    border-bottom: 0;
     font-family: 'Franklin Gothic';
     font-weight: lighter;
     font-size: 24px;
@@ -39,11 +54,15 @@ button {
 }
 
 #controller {
+    width: 90%;
+}
+
+.game-container {
     display: flex;
     flex-direction: column;
     background-color: rgb(222, 222, 222);
-    width: 100%;
     border: 1px solid black;
+    
 }
 
 #homepage-body {
@@ -51,11 +70,21 @@ button {
     justify-content: center;
 }
 
-.action-button {
-    font-size: large;
-    width: 90%;
-    align-self: center;
-    margin: 5px;
+#cards-table:empty{
+    display: none;
+}
+
+
+#cards-table{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-block: 10px;
+    background: #006900;
+    background: radial-gradient(circle, rgba(0, 105, 0, 1) 0%, rgb(0, 61, 0) 100%);
+    justify-items: center;
+    align-items: center;
 }
 
 #sqlrequest {
@@ -65,16 +94,4 @@ button {
     min-height: 10%;
     max-height: 20%;
     align-self: center;
-}
-
-#cards-table:empty{display: none;}
-#cards-table{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 5px;
-    background-color: green;
-    border-radius: 5px;
-    margin: 5px;
-    justify-items: center;
 }

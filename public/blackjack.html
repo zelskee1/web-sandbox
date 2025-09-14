@@ -10,16 +10,20 @@
 <body id="homepage-body">
     <div id="homepage-main-frame">
         <div id="controller">
-            <h1 class="homepage-frame-title bj-bg">Blackjack</h1>
-            <button class="action-button" id="home-button">Home</button>
-            <button class="action-button" id="deckgen-button">Generate deck</button>
-            <button class="action-button" id="deckshuf-button">Shuffle Deck</button>
-            <button class="action-button" id="showdeck-button">Show Deck</button>
-            <button class="action-button" id="deckdraw-button">Draw a card</button>
-            <button class="action-button" id="clear-button">Clear table</button>
-            
-            <div id="cards-table"></div>
+            <h1 class="homepage-frame-title bj-bg" id="blackjack-title">Blackjack</h1>
+            <div class="game-container">
+                <div class="buttons-container">        
+                <button class="action-button" id="home-button">Home</button>
+                <button class="action-button" id="deckgen-button">Generate deck</button>
+                <button class="action-button" id="deckshuf-button">Shuffle Deck</button>
+                <button class="action-button" id="showdeck-button">Show Deck</button>
+                <button class="action-button" id="deckdraw-button">Draw a card</button>
+                <button class="action-button" id="clear-button">Clear table</button>
+            </div>
 
+            <div id="cards-table"></div>
+        </div>
+            
 
             <script src="src/cards.js"></script>
             <script>
@@ -74,6 +78,7 @@
                         img.src= cards_images[card];
                         img.alt = card;
                         img.style.width = "80px";
+                        img.style.height = "120px";
                         table.appendChild(img);
                         drawn_cards.push(card);
                         console.log(`${card} has been drawn`);                
@@ -89,6 +94,7 @@
                     table.innerHTML = "";
                     console.log("Table has been cleared");
                 }
+
 
             </script>
         </div>
